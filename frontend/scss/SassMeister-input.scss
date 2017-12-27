@@ -1,0 +1,262 @@
+// ----
+// Sass (v3.4.21)
+// Compass (v1.0.3)
+// ----
+
+body {background-color:#f1f1f1;
+min-width:1300px;
+}
+$space-5: 5px;
+$space-10: 10px;
+$space-15: 15px;
+$space-30: 30px;
+
+$font-6: 0.7em;
+$font-8: 0.8em;
+$font-9: 0.9em;
+$font-11: 1.1em;
+$font-12: 1.2em;
+$font-13: 1.3em;
+$font-18: 1.8em;
+
+$border: 1px solid #dddddd;
+
+$color-gray: #b8b8b8;
+$color-deepgray: #777;
+$color-white: #fff;
+$middle: 50%;
+
+/* 共通利用 */
+.bold {font-weight:bold;}
+.gray {color:$color-gray;}
+.deepgray {color:$color-deepgray;}
+.font-6 {font-size: $font-6;}
+.font-8 {font-size: $font-8;}
+.center {text-align:center;}
+.bottom20 {margin-bottom: 20px;}
+.inline {display:inline-block;}
+.line {border-bottom: $border;}
+.font-9{font-size: $font-9;}
+.fa {margin-right:$space-5;}
+.on-right {float:right;}
+.spam-icon {
+  @extend .on-right;
+  margin-right:$space-30;
+}
+/* 共通利用 end */
+
+.head {
+  width:100%;
+  height: 62px;
+  margin:0;
+  border-bottom: 1px solid #dddddd;
+  background-color: $color-white;
+&__in {padding: $space-15 $space-30;}
+ .fa-bars{color:$color-gray;
+ vertical-align: $middle;
+ margin: 0 $space-10;}
+&__icons {float:right;} 
+}
+.logo-top {margin-right:$space-30;}
+.search{
+&__form {
+vertical-align:$middle;
+width: 70%;
+display:inline-block;
+  &--size {width: 80%;
+  height:28px;
+  display:inline-block;
+  font-size:$font-11;
+  }
+  
+}
+&--btn {background:#f8f8f8;
+border-radius:none;
+color:$color-gray;
+padding: 2px $space-30;
+margin-left: -7px;
+}
+}
+input[type="text"],input[type="submit"]
+{line-height:28px;display:inline-block; 
+vertical-align : middle; 
+  border-radius: 0;
+}
+
+.login {background-color:#257DC2; color: $color-white;
+border-radius:2px; 
+font-size: $font-8;
+float: right; 
+padding: 8px;
+margin-left: $space-30;
+}
+
+.main-movie {
+  margin: $space-10 auto;
+  &__informBox {
+    &__title {font-size: $font-12;}
+  }
+}
+
+.user-info {
+  &__rightSide {vertical-align: top;
+  line-height:.2;
+display:inline-block; margin: $space-5; }
+  &__redbox {background-color: #f00;
+    color:$color-white;
+    width:110px;
+    text-align:center;
+    vertical-align : middle;
+  }
+  &__subscription {
+    border:$border;
+    padding: 6px;
+    margin-left: -6px;
+    font-size: 0.6em;
+    vertical-align : middle;
+  }
+  .fa-youtube-play {font-size:$font-12; padding: 4px 0;}
+}
+.play-info {margin-top: 25px; float:right;
+  &__icons{font-size:$font-6; color:$color-deepgray;
+    & .fa {font-size: $font-18}
+  }
+  
+}
+.playtimes:before {content:'視聴回数 ';}
+.playtimes:after {content:' 回';}
+.playtimes {width:180px;
+text-align:center; margin-left: auto;
+border-bottom: 2px solid #257DC2;
+  font-weight: 400;
+  margin-bottom:-$space-5;
+}
+.clearfix {clear:both;}
+.hr {margin-top:3px; background-color:#eeeeee; color:#eeeeee; height:1px; border: none;}
+.frame {
+  margin: $space-10 0;
+  &--white {background-color:$color-white;
+  }
+  &--w150 {width:770px;
+    padding: $space-5 $space-15;
+  }
+}
+
+.user-write {
+  &__info {line-height: 0.5;}
+  &__more {line-height: 0;}
+}
+
+.comment {
+  &__form {font-size:$font-9; color:$color-gray;
+  vertical-align: top;
+width: 90%;
+height:42px;
+display:inline-block; margin-top:-40px;
+  }
+&__selectWrap{
+    position: relative;
+    display: inline-block;
+& select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    height: 28px;
+    background-color: #FCFCFC;;
+    position: relative;
+    z-index: 1;
+    padding: 0 $space-10;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    &:hover {background-color:#F7F7F7;}
+}
+}
+
+&__selectWrap::after{
+    content: '';
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    right: 10px;
+    width: 0;
+    height: 0;
+    z-index: 2;
+    border-style: solid;
+    border-width: 4px 4px 0 4px;
+    border-color: #000 transparent transparent transparent; 
+}
+ &--others {padding: $space-15 0;}
+}
+
+
+.contents {display:inline-block;}
+.side {background-color:$color-white;
+width:320px;
+vertical-align: top;
+display: inline-block;
+padding: $space-15;
+margin: $space-10 $space-5;
+  &__movie {
+    &__box {margin-bottom:$space-10;}
+  }
+}
+
+.movie {
+  &--inform {line-height: .2; 
+  vertical-align:top;}
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 38px;
+  height: 16px;
+& input {display:none;}
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+ &:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 2px;
+  bottom: 1px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+  content: '&#xf00c';
+  &:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.slider.round {
+  border-radius: 14px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
